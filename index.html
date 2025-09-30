@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dance-of-the-continents</title>
+    <title>Dance of the Continents</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="storymaps-root"></div>
+    <script>
+        window.storyMapsEmbedConfig = {
+        "storyId": "3336baf1fa4d46ab96af706ed1c4c1a1",
+        "rootNode": ".storymaps-root"
+    }
+    </script>
+    <script src="https://storymaps.arcgis.com/embed/view"></script>    
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

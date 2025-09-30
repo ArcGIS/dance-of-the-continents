@@ -1,0 +1,33 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling in embed */
+}
+
+body {
+  background-color: #000; /* Pure black for clean embedding */
+  color: white;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Embed-specific container styles */
+#image-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sequence-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill the container while maintaining aspect ratio */
+  display: block;
+  transition: none; /* No transitions for smooth frame changes */
+}
