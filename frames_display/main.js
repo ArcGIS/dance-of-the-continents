@@ -34,8 +34,6 @@ function initialize() {
       totalFrames: 171,
       framePath: '/frames_doc/frame_',
       frameExtension: '.jpg',
-      triggerElement: document.getElementById('sequence-trigger'),
-      imageElement: document.getElementById('sequence-image'),
       debugMode: false,
       preloadStrategy: 'progressive'
     };
