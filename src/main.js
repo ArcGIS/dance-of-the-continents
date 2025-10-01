@@ -95,8 +95,8 @@ const setupScrollListener = ()=> {
 
       if (!iframe || !iframe.contentWindow) return;
 
-      // Calculate frame index (assuming 120 total frames)
-      const totalFrames = 120;
+      // Calculate frame index (assuming 171 total frames)
+      const totalFrames = 171;
       const frameIndex = Math.floor(adjustedProgress * (totalFrames - 1)) + 1;
 
       iframe.contentWindow.postMessage(

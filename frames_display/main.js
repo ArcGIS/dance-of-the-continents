@@ -12,7 +12,7 @@ function setupMessageListener() {
         const frameIndex = event.data.payload;
         
         // Check if payload is a valid frame number
-        if (typeof frameIndex !== 'number' || frameIndex < 1 || frameIndex > 120) {
+        if (typeof frameIndex !== 'number' || frameIndex < 1 || frameIndex > 171) {
             console.warn(`Invalid frame index received: ${frameIndex}`);
             return;
         }
@@ -31,7 +31,7 @@ function initialize() {
 
     // Create scroll-driven sequence
     const config = {
-      totalFrames: 120,
+      totalFrames: 171,
       framePath: '/frames_doc/frame_',
       frameExtension: '.jpg',
       triggerElement: document.getElementById('sequence-trigger'),
@@ -53,6 +53,9 @@ function initialize() {
       
       console.log(`Scroll → Frame ${data.currentFrame} (${(data.progress * 100).toFixed(1)}%)`);
     });
+
+    // Initialize display with the first frame
+    controller.goToFrame(1);
 
 }
 

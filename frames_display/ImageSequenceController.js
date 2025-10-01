@@ -3,7 +3,7 @@
  * 
  * @example
  * const controller = new ImageSequenceController({
- *   totalFrames: 168,
+ *   totalFrames: 171,
  *   framePath: '/frames/frame_',
  *   frameExtension: '.jpg',
  *   preloadStrategy: 'progressive'
@@ -19,7 +19,7 @@
 export class ImageSequenceController {
   constructor(config = {}) {
     // Configuration
-    this.totalFrames = config.totalFrames || 168;
+    this.totalFrames = config.totalFrames || 171;
     this.framePath = config.framePath || '/frames/frame_';
     this.frameExtension = config.frameExtension || '.jpg';
     this.preloadStrategy = config.preloadStrategy || 'progressive'; // 'none', 'key', 'progressive'
@@ -158,11 +158,13 @@ export class ImageSequenceController {
   
   /**
    * Generate frame path
-   * @param {number} frameNumber - Frame number
+   * @param {number} frameNumber - Frame number (1-based)
    * @returns {string} - Frame file path
    */
   getFramePath(frameNumber) {
-    const paddedNumber = frameNumber.toString().padStart(4, '0');
+    // Convert 1-based frame number to 0-based for file naming
+    const fileNumber = frameNumber - 1;
+    const paddedNumber = fileNumber.toString().padStart(4, '0');
     return `${this.framePath}${paddedNumber}${this.frameExtension}`;
   }
   
