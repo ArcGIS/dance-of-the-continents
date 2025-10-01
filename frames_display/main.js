@@ -1,6 +1,9 @@
 import './style.css'
 import { ImageSequenceController } from './ImageSequenceController.js';
 
+// Configuration constants
+const TOTAL_FRAMES = 171; // frames 0000-0170
+
 // Global controller reference so message listener can access it
 let controller = null;
 
@@ -12,7 +15,7 @@ function setupMessageListener() {
         const frameIndex = event.data.payload;
         
         // Check if payload is a valid frame number
-        if (typeof frameIndex !== 'number' || frameIndex < 1 || frameIndex > 171) {
+        if (typeof frameIndex !== 'number' || frameIndex < 1 || frameIndex > TOTAL_FRAMES) {
             console.warn(`Invalid frame index received: ${frameIndex}`);
             return;
         }
@@ -31,7 +34,7 @@ function initialize() {
 
     // Create scroll-driven sequence
     const config = {
-      totalFrames: 171,
+      totalFrames: TOTAL_FRAMES,
       framePath: '/frames_doc/frame_',
       frameExtension: '.jpg',
       debugMode: false,

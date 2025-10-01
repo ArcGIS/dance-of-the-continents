@@ -1,5 +1,8 @@
 import './style.css';
 
+// Configuration constants
+const TOTAL_FRAMES = 171; // frames 0000-0170
+
 const selectorSidecar = "#n-SOFOgt > div";
 const selectorTargetDocked = "#n-SOFOgt > div > div.jsx-2592556314.jsx-1848129036.container";
 const selectorIframe = "div.jsx-1072141097.iframe-wrapper > iframe";
@@ -95,9 +98,8 @@ const setupScrollListener = ()=> {
 
       if (!iframe || !iframe.contentWindow) return;
 
-      // Calculate frame index (assuming 171 total frames)
-      const totalFrames = 171;
-      const frameIndex = Math.floor(adjustedProgress * (totalFrames - 1)) + 1;
+      // Calculate frame index
+      const frameIndex = Math.floor(adjustedProgress * (TOTAL_FRAMES - 1)) + 1;
 
       iframe.contentWindow.postMessage(
         {
