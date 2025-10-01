@@ -95,10 +95,14 @@ const setupScrollListener = ()=> {
 
       if (!iframe || !iframe.contentWindow) return;
 
+      // Calculate frame index (assuming 120 total frames)
+      const totalFrames = 120;
+      const frameIndex = Math.floor(adjustedProgress * (totalFrames - 1)) + 1;
+
       iframe.contentWindow.postMessage(
         {
           source: 'storymap-controller',
-          payload: adjustedProgress*100
+          payload: frameIndex
         },
         '*'
       );

@@ -9,19 +9,19 @@ function setupMessageListener() {
         // Basic validation
         if (!event.data || event.data.source !== "storymap-controller") return;
         
-        const scrollData = event.data.payload;
+        const frameIndex = event.data.payload;
         
-        // Check if payload is a valid number
-        if (typeof scrollData !== 'number' || scrollData < 0 || scrollData > 100) {
-            console.warn(`Invalid scroll data received: ${scrollData}`);
+        // Check if payload is a valid frame number
+        if (typeof frameIndex !== 'number' || frameIndex < 1 || frameIndex > 120) {
+            console.warn(`Invalid frame index received: ${frameIndex}`);
             return;
         }
         
-        console.log(`Received scroll percentage: ${scrollData}%`);
+        console.log(`Received frame index: ${frameIndex}`);
         
         // Now we can use the controller!
         if (controller) {
-            controller.goToProgress(scrollData / 100); // Convert percentage to 0-1
+            controller.goToFrame(frameIndex);
         }
     });
 }

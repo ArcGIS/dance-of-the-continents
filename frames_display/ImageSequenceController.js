@@ -13,7 +13,8 @@
  *   myImage.src = data.imageSrc;
  * });
  * 
- * controller.goToProgress(0.5); // Go to middle frame
+ * controller.goToFrame(84); // Go to frame 84
+ * // or controller.goToProgress(0.5); // Alternative: go to middle frame
  */
 export class ImageSequenceController {
   constructor(config = {}) {
