@@ -1,11 +1,9 @@
 import './style.css';
+import { FRAME_CONFIG, SELECTORS } from '../shared/config.js';
 
-// Configuration constants
-const TOTAL_FRAMES = 171; // frames 0000-0170
-
-const selectorSidecar = "#n-SOFOgt > div";
-const selectorTargetDocked = "#n-SOFOgt > div > div.jsx-2592556314.jsx-1848129036.container";
-const selectorIframe = "div.jsx-1072141097.iframe-wrapper > iframe";
+const selectorSidecar = SELECTORS.SIDECAR;
+const selectorTargetDocked = SELECTORS.TARGET_DOCKED;
+const selectorIframe = SELECTORS.IFRAME;
 
 // --- shared state ---
 let isDocked = false;
@@ -99,7 +97,7 @@ const setupScrollListener = ()=> {
       if (!iframe || !iframe.contentWindow) return;
 
       // Calculate frame index
-      const frameIndex = Math.floor(adjustedProgress * (TOTAL_FRAMES - 1)) + 1;
+      const frameIndex = Math.floor(adjustedProgress * (FRAME_CONFIG.TOTAL_FRAMES - 1)) + 1;
 
       iframe.contentWindow.postMessage(
         {
