@@ -86,12 +86,15 @@ const setupScrollListener = ()=> {
 			const sideCarHeight = elementSidecar.clientHeight;
 			const sideCarTop = elementSidecar.offsetTop;
 			const scrollTop = window.scrollY;
-			const scrollProgress = (scrollTop - sideCarTop) / sideCarHeight;
+			
+			// Account for viewport height - when bottom of sidecar reaches top of viewport, we're at 100%
+			const availableScrollDistance = sideCarHeight - window.innerHeight;
+			const scrollProgress = (scrollTop - sideCarTop) / availableScrollDistance;
       
 			const growthMultiplier = 1; // adjust as you like
 			const adjustedProgress = Math.min(scrollProgress*growthMultiplier, 1);
-      
 
+      
       const iframe = document.querySelector(selectorIframe);
 
       if (!iframe || !iframe.contentWindow) return;
