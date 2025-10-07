@@ -7,10 +7,10 @@
 
 export const FRAME_CONFIG = {
   // Total number of frames (0000-0170 = 171 frames)
-  TOTAL_FRAMES: 171,
+  TOTAL_FRAMES: 208,
   
   // Frame file naming
-  FRAME_PATH: '/frames_doc/frame_',
+  FRAME_PATH: '/frames/',
   FRAME_EXTENSION: '.jpg'
 };
 
