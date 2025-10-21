@@ -6,11 +6,11 @@
  */
 
 export const FRAME_CONFIG = {
-  // Total number of frames (0000-0170 = 171 frames)
+  // Total number of frames (0000-0207 = 208 frames)
   TOTAL_FRAMES: 208,
   
-  // Frame file naming
-  FRAME_PATH: '/frames/',
+  // Frame file naming - ensure absolute path from site root
+  FRAME_PATH: (import.meta.env.BASE_URL + 'frames/').replace(/([^:]\/)\/+/g, '$1'),
   FRAME_EXTENSION: '.jpg'
 };
 
