@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "https://leebock.github.io/dance-of-the-continents/:splat"
+  status = 301
+  force = true
