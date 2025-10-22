@@ -16,8 +16,8 @@ export const FRAME_CONFIG = {
 
 // CSS selectors (used in main controller)
 export const SELECTORS = {
-  SIDECAR: "#n-SOFOgt > div",
-  TARGET_DOCKED: "#n-SOFOgt > div > div.container",
+  SIDECAR: "#n-nQJJFq > div",
+  TARGET_DOCKED: "#n-nQJJFq > div > div.container",
   IFRAME: "div.iframe-wrapper > iframe"
 };
 
