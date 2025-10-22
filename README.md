@@ -1,34 +1,59 @@
 # Dance of the Continents
 
-This repo contains the application files for the enhanced ArcGIS StoryMaps project, Dance of the Continents.
+![Dance of the Continents](dance-of-the-continents.png)
 
-This first section should contain a description of your repo:
-what it does, what product(s) it works with, and any other
-relevant top-level infomration.
+Watch millions of years of Earth's geological history unfold through interactive scroll-driven animation.
+
+This enhanced ArcGIS StoryMaps project embeds a story via script and harnesses the page scroll event to create an introductory scrolly animation sequence.
+
+<a href="https://leebock.github.io/dance-of-the-continents/" target="_blank">View it live</a>
 
 ## Features
 
-* It does this
-* And it does that
-* But wait, it does still more
+* Scroll-driven frame animation - Over 200 jpg frames controlled by page scroll position
+* Iframe integration - Seamlessly embeds within ArcGIS StoryMaps via postMessage communication
+* Responsive viewport calculation - Accurate scroll progress accounting for different screen sizes
 
 ## Instructions
 
-Here is how you might utilize this repo:
-1. Fork or clone the repo.
-2. Run it!
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/leebock/dance-of-the-continents.git
+   cd dance-of-the-continents
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   - Main application: `http://localhost:5173`
+   - Frame display: `http://localhost:5173/frames_display/`
 
 ## Requirements
 
-Here are some things you will need
-* [A GitHub account in the ArcGIS and Esri orgs](https://github-admin.esri.com/doc/joining-the-arcgis-and-esri-orgs.html)
-* [A repository in the ArcGIS org](https://github-admin.esri.com/doc/creating-a-new-repository.html)
+### Technical Requirements
+- **Node.js** (version 18 or higher)
+- **npm** or **yarn** package manager
+- **Modern web browser** (Chrome, Firefox, Safari, Edge)
+
+### For ArcGIS StoryMaps Integration
+- **ArcGIS Online account** or **ArcGIS Enterprise**
+- **StoryMaps authoring privileges**
+
+### Optional but Recommended
+- **Git** for version control
+- **VS Code** or similar code editor
 
 ## Resources
 
-* [GitHub Markdown Reference](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [Esri Copyright Statement](https://github-admin.esri.com/doc/copyright.txt)
-* [Public Repository Guidelines](https://github-admin.esri.com/doc/public-repository-requirements-and-guidelines.html)
+* [Introducing Story Embeds via Script!](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/constituent-engagement/introducing-story-embeds-via-script) - ArcGIS Blog post explaining the script embedding technique used in this project
 
 ## Issues
 
@@ -36,7 +61,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 
 ## Contributing
 
-Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
+This project serves as a demonstration of scroll-driven animation techniques for ArcGIS StoryMaps. While we're not accepting contributions at this time, you're welcome to fork the repository, adapt it for your own projects, or submit issues for bug reports. Thank you for your interest!
 
 ## Licensing
 
@@ -55,4 +80,3 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 A copy of the license is available in the repository's [LICENSE.txt](LICENSE.txt?raw=true) file.
-\
