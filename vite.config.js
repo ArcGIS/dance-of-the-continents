@@ -20,11 +20,15 @@ limitations under the License.
 // vite.config.js
 import { defineConfig } from 'vite';
 
-// Set base dynamically: GitHub Pages (actions) vs everything else
+// Set base dynamically: GitHub Pages (actions) vs IIS vs local dev
 export default defineConfig(() => {
   const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
-  // ⬇️ replace <repo> with your exact repo name
-  const base = isGitHubActions ? '/dance-of-the-continents/' : '/';
+  const isIISBuild = process.env.IIS_BUILD === 'true';
+  
+  // Use appropriate base path for each deployment target
+  const base = isGitHubActions ? '/dance-of-the-continents/' : 
+               isIISBuild ? '/stories/dance-of-the-continents/' : 
+               '/';
 
   return {
     base,
