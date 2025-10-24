@@ -61,7 +61,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 
 ## Contributing
 
-This project serves as a demonstration of scroll-driven animation techniques for ArcGIS StoryMaps. While we're not accepting contributions at this time, you're welcome to fork the repository, adapt it for your own projects, or submit issues for bug reports. Thank you for your interest!
+Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
 
