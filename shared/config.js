@@ -28,7 +28,7 @@ export const FRAME_CONFIG = {
   TOTAL_FRAMES: 208,
   
   // Frame file naming - ensure absolute path from site root
-  FRAME_PATH: (import.meta.env.BASE_URL + 'frames/').replace(/([^:]\/)\/+/g, '$1'),
+  FRAME_PATH: (import.meta.env.BASE_URL + 'frames_no_labels/').replace(/([^:]\/)\/+/g, '$1'),
   FRAME_EXTENSION: '.jpg'
 };
 
