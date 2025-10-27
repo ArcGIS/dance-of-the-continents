@@ -36,7 +36,8 @@ export const FRAME_CONFIG = {
 export const SELECTORS = {
   SIDECAR: "#n-nQJJFq > div",
   TARGET_DOCKED: "#n-nQJJFq > div > div.container",
-  IFRAME: "div.iframe-wrapper > iframe"
+  IFRAME: "div.iframe-wrapper > iframe",
+  MESSAGE_DIV: "#n-5GpYQB"
 };
 
 export default { FRAME_CONFIG, SELECTORS };

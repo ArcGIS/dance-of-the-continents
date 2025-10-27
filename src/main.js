@@ -22,6 +22,7 @@ import { FRAME_CONFIG, SELECTORS } from '../shared/config.js';
 const selectorSidecar = SELECTORS.SIDECAR;
 const selectorTargetDocked = SELECTORS.TARGET_DOCKED;
 const selectorIframe = SELECTORS.IFRAME;
+const selectorMessageDiv = SELECTORS.MESSAGE_DIV;
 
 // --- shared state ---
 let isDocked = false;
@@ -137,6 +138,12 @@ const setupScrollListener = ()=> {
 
 
 function initialize() {
+  // Wait for and hide the message div when it appears
+  waitForElement(selectorMessageDiv, (messageDiv) => {
+    messageDiv.style.display = 'none';
+    console.log("Message div hidden");
+  });
+  
   setupDockingObserver();
   setupScrollListener();
 }
